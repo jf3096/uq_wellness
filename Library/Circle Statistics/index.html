@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html">
+  <title>Animated Circle Stats - Template Monster Demo</title>
+  <meta name="author" content="Jake Rocheleau">
+  <link rel="shortcut icon" href="http://static.tmimgcdn.com/img/favicon.ico">
+  <link rel="icon" href="http://static.tmimgcdn.com/img/favicon.ico">
+  <link rel="stylesheet" type="text/css" media="all" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" media="all" href="css/jquery.circliful.css">
+  <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery.circliful.min.js"></script>
+</head>
+
+<body>
+  <header id="top">
+    <div class="wrap">
+      <h1>My Simple Portfolio</h1>
+    </div>
+  </header>
+  
+  <div id="intro">
+    <div class="wrap">
+      <p>I'm a real swell guy. Been designing for over a decade with experience using all the primary graphic editing suites. Plus I know my way around the most popular development languages like HTML5, CSS3, jQuery, and PHP.</p>
+      
+      <p>Maybe these charts will help you understand!</p>
+    </div>
+  </div>
+  
+  <div id="stats" class="clearfix">
+    <div class="wrap">
+    <div class="row">
+      <div class="circle-container">
+        <h3>Photoshop</h3>
+        <div class="circlestat" data-dimension="200" data-text="55%" data-width="30" data-fontsize="38" data-percent="55" data-fgcolor="#61a9dc" data-bgcolor="#eee" data-fill="#ddd"></div>
+      </div>
+      
+      <div class="circle-container">
+        <h3>Illustrator</h3>
+        <div class="circlestat" data-dimension="200" data-text="75%" data-width="30" data-fontsize="38" data-percent="75" data-fgcolor="#61a9dc" data-bgcolor="#eee" data-fill="#ddd"></div>
+      </div>
+      
+      <div class="circle-container">
+        <h3>After Effects</h3>
+        <div class="circlestat" data-dimension="200" data-text="35%" data-width="30" data-fontsize="38" data-percent="35" data-fgcolor="#61a9dc" data-bgcolor="#eee" data-fill="#ddd"></div>
+      </div>
+    </div><!-- @end .row -->
+    
+    <div class="row">
+      <div class="circle-container">
+        <h3>CSS3</h3>
+        <div class="circlestat" data-dimension="200" data-text="90%" data-width="30" data-fontsize="38" data-percent="90" data-fgcolor="#61a9dc" data-bgcolor="#eee" data-fill="#ddd"></div>
+      </div>
+      
+      <div class="circle-container">
+        <h3>jQuery</h3>
+        <div class="circlestat" data-dimension="200" data-text="80%" data-width="30" data-fontsize="38" data-percent="80" data-fgcolor="#61a9dc" data-bgcolor="#eee" data-fill="#ddd"></div>
+      </div>
+      
+      <div class="circle-container">
+        <h3>PHP5</h3>
+        <div class="circlestat" data-dimension="200" data-text="65%" data-width="30" data-fontsize="38" data-percent="65" data-fgcolor="#61a9dc" data-bgcolor="#eee" data-fill="#ddd"></div>
+      </div>
+    </div>
+    </div><!-- @end .wrap -->
+  </div><!-- @end #stats -->
+<script type="text/javascript">
+$(function(){
+  $('.circlestat').circliful();
+});
+</script>
+</body>
+</html>
