@@ -189,13 +189,14 @@ form.login a {
 
 #wrapper {
     height: 100%;
+    min-height: 100%;
     position: relative;
     background-color: #F5F5F5;
 }
 
 #top {
     background-color: #FAEBFF;
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -207,17 +208,19 @@ form.login a {
         color: #4D4D4D;
         font-size: 20px;
     }
+
     #top img {
         margin-top: 20px;
     }
 
-
 .content {
-    margin: 98px;
+    display: table;
+    padding: 113px 0 93px;
+    height: 100%;
+    width: 100%;
 }
 
 .footer {
-    padding: 25px 15px;
     font-size: 20px;
     position: absolute;
     bottom: 0;
@@ -226,15 +229,58 @@ form.login a {
     color: white;
 }
 
+.total-run {
+    color: #87009E;
+    text-align: right;
+    margin: 0 8px 10px 0;
+}
+
+.footer-detail {
+    padding: 25px 15px;
+    
+}
+
 .bg-purple {
     background-color: #A36CC1;
     background-color: #A36CC1 !important;
 }
+
 .font-dark-purple {
     color: #4D226D;
     color: #4D226D !important;
 }
+
 .footer-caption {
     margin-right: 10px;
     color: #4D226D;
 }
+
+/*circliful*/
+
+.circliful {
+    position: relative;
+}
+
+.circle-text, .circle-info, .circle-text-half, .circle-info-half {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    display: inline-block;
+}
+
+.circle-info, .circle-info-half {
+    color: #999;
+}
+
+.circliful .fa {
+    margin: -10px 3px 0 3px;
+    position: relative;
+    bottom: 4px;
+}
+
+.circlestat {
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+/*end of circliful*/
