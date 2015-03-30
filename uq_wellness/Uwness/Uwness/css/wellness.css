@@ -1,6 +1,7 @@
 ﻿html, body {
     height: 100%;
     min-height: 100%;
+      background-color: #F5F5F5;
 }
 
 #login {
@@ -196,11 +197,12 @@ form.login a {
 
 #top {
     background-color: #FAEBFF;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     color: #4D4D4D;
+    z-index: 1;
 }
 
     #top .title {
@@ -222,7 +224,7 @@ form.login a {
 
 .footer {
     font-size: 20px;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
