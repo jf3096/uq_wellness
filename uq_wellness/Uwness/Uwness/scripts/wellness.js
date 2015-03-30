@@ -2,7 +2,7 @@
 var initCircliful = function () {
     var $circlestat = $('.circlestat');
     if ($circlestat.length > 0) {
-        $circlestat.context.circliful();
+        $circlestat.circliful();
         $circlestat.on("click", function () {
         });
     }
