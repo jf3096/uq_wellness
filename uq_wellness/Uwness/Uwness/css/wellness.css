@@ -237,7 +237,6 @@ form.login a {
 
 .footer-detail {
     padding: 25px 15px;
-    
 }
 
 .bg-purple {
@@ -261,6 +260,10 @@ form.login a {
     position: relative;
 }
 
+.circle-text {
+    color: #87009E;
+}
+
 .circle-text, .circle-info, .circle-text-half, .circle-info-half {
     width: 100%;
     position: absolute;
@@ -269,7 +272,9 @@ form.login a {
 }
 
 .circle-info, .circle-info-half {
-    color: #999;
+    text-align: right;
+    color: #4D4D4D;
+    font-size: 26px;
 }
 
 .circliful .fa {
@@ -282,5 +287,7 @@ form.login a {
     margin: 0 auto;
     margin-bottom: 40px;
 }
+
+
 
 /*end of circliful*/
