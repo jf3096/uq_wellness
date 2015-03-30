@@ -100,6 +100,11 @@ form.login .forgot-pass-content {
     min-height: 20px;
 }
 
+.forgot-pw-content {
+    float: right;
+    text-align: right;
+}
+
 form.login label, form.login a {
     color: #FFFFFF;
     font-size: 12px;
