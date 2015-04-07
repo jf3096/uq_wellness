@@ -1,0 +1,9 @@
+diff a/uq_wellness/Uwness/Uwness/css/wellness.css b/uq_wellness/Uwness/Uwness/css/wellness.css	(rejected hunks)
+@@ -197,7 +197,6 @@
+ 
+ #top {
+     background-color: #FAEBFF;
+-    position: absolute;
+     position: fixed;
+     top: 0;
+     left: 0;
