@@ -22,7 +22,10 @@
 .ofh {
     overflow: hidden;
 }
-
+.dp-blk {
+    display: block;
+    display: block!important;
+}
 .display-table {
     display: table;
     height: 100%;
@@ -222,18 +225,16 @@ form.login a {
 
 .content {
     display: table;
-    padding: 113px 0 93px;
+    padding-top: 90px;
     height: 100%;
     width: 100%;
 }
 
-.footer {
+.bar-footer {
     font-size: 20px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
     color: white;
+    padding: 0;
+    height: auto;
 }
 
 .total-run {
@@ -244,6 +245,7 @@ form.login a {
 
 .footer-detail {
     padding: 25px 15px;
+    width: 100%;
 }
 
 .bg-purple {
@@ -355,4 +357,10 @@ form.login a {
     background-color: transparent;
     border: none;
     left: 3px;
+}
+.scroll {
+    height: 100%;
+}
+.has-footer {
+    bottom: 70px;    
 }
