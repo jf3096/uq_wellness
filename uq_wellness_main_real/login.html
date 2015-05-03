@@ -20,6 +20,7 @@
 	<link href="css/style.min.css" rel="stylesheet" />
 	<link href="css/style-responsive.min.css" rel="stylesheet" />
 	<link href="css/retina.css" rel="stylesheet" />
+	<link href="css/style.css" rel="stylesheet" />
 	<!-- end: CSS -->
 	
 
@@ -43,35 +44,25 @@
 		
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 
-<body>
+<body style="background:url(img/background.jpg); filter: blur(5px); background-size:cover">
 		<div class="container-fluid-full">
-		<div class="row-fluid">
-					
-			<div class="row-fluid">
+		<div class="row-fluid wrapper">
+				<!-- <div id="search-bg"></div> -->
 				<div class="login-box">
-					<h2>Login to your account</h2>
 					<form class="form-horizontal" action="index.html" method="post" />
+						<div id="login-field">
+							<h2>UQ Trek</h2>
 						<fieldset>
-							
 							<input class="input-large span12" name="username" id="username" type="text" placeholder="type username" />
-
-							<input class="input-large span12" name="password" id="password" type="password" placeholder="type password" />
-
 							<div class="clearfix"></div>
 							
-							<label class="remember" for="remember"><input type="checkbox" id="remember" />Remember me</label>
-							
+							<input class="input-large span12" name="password" id="password" type="password" placeholder="type password" />			
 							<div class="clearfix"></div>
 							
-							<button type="submit" class="btn btn-primary span12">Login</button>
+							<button type="submit" class="btn btn-primary">Log in</button>
 						</fieldset>	
-
+						</div>
 					</form>
-					<hr />
-					<h3>Forgot Password?</h3>
-					<p>
-						No problem, <a href="#">click here</a> to get a new password.
-					</p>	
 				</div>
 			</div><!--/row-->
 			
