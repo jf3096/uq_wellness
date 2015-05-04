@@ -25,17 +25,17 @@
    float: none;
     border-radius: 20px!important;
 }
-#search-bg {
-  /* Absolutely position it, but stretch it to all four corners, then put it just behind #search's z-index */
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  z-index: 99;
+#login-bg {
+	 /* Absolutely position it, but stretch it to all four corners, then put it just behind #search's z-index */
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	z-index: 99;
 
-  /* Pull the background 70px higher to the same place as #bg's */
-  /*background-position: center -70px;*/
+	  /* Pull the background 70px higher to the same place as #bg's */
+	background-position: center -70px;
 	-webkit-filter: blur(5px);
 	-moz-filter: blur(5px);
 	-o-filter: blur(5px);
