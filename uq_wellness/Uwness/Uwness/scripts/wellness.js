@@ -1,4 +1,5 @@
-﻿
+﻿var registerUrl = "register.html";
+
 var initCircliful = function () {
     var $circlestat = $('.circlestat');
     if ($circlestat.length > 0) {
@@ -15,7 +16,19 @@ var iniWOW = function () {
     }
 }
 
+var redirect2Register = function() {
+    $("#register").click(function() {
+        redirect2Url(registerUrl);
+        return false;
+    });
+};
+
+var redirect2Url=function($url) {
+    location.href = $url;
+}
+
 $(function () {
     initCircliful();
     iniWOW();
+    redirect2Register();
 });

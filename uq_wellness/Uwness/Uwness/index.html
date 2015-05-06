@@ -13,22 +13,18 @@
             <div class="col-md-12">
                 <div class="wow fadeInDown">
                     <p class="form-title">
-                        Sign In
+                        <img src="images/logo.svg" id="logo" />
                     </p>
                     <form class="login" action="main.html">
-                        <input type="text" placeholder="Username" />
-                        <input type="password" placeholder="Password" />
-                        <input type="submit" value="Sign In" class="btn btn-success btn-sm" />
-                        <div class="remember-forgot">
-                            <div class="row">
-                                <div class="col-md-6 fl">
-                                    <a href="register.html">Register?</a>
-                                </div>
-                                <div class="col-md-6 forgot-pw-content">
-                                    <a href="javascript:;">Forgot Password</a>
-                                </div>
+                        <input type="text" placeholder="Username" class="round-input" />
+                        <input type="password" placeholder="Password" class="round-input" />
+                        <input type="submit" value="Sign In" class="btn btn-blue btn-sm round-input" />
+                        <div class="row forget-pwd">
+                            <div class="col-md-12 txt-center">
+                                <a href="register.html">I forget my password</a>
                             </div>
                         </div>
+                        <input type="submit" value="Register" id="register" class="btn btn-purple btn-sm round-input" />
                     </form>
                 </div>
             </div>
@@ -39,7 +35,7 @@
     </div>
 </body>
 </html>
-<!--<script src="cordova.js"></script>-->
+<script src="cordova.js"></script>
 <script src="scripts/jquery-1.11.2.min.js"></script>
 <script src="scripts/bootstrap.min.js"></script>
 <script src="scripts/wow.js"></script>

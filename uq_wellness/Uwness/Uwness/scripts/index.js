@@ -5,14 +5,36 @@
 (function () {
     "use strict";
 
-    document.addEventListener( 'deviceready', onDeviceReady.bind( this ), false );
+    document.addEventListener('deviceready', onDeviceReady.bind(this), false);
 
     function onDeviceReady() {
         // Handle the Cordova pause and resume events
-        document.addEventListener( 'pause', onPause.bind( this ), false );
-        document.addEventListener( 'resume', onResume.bind( this ), false );
-        
+        document.addEventListener('pause', onPause.bind(this), false);
+        document.addEventListener('resume', onResume.bind(this), false);
+
         // TODO: Cordova has been loaded. Perform any initialization that requires Cordova here.
+
+        var watchId = 0;
+
+        $("#accBtn").bind('touchstart', function () {
+            if (watchId == 0) {
+
+                watchId = navigator.accelerometer.watchAcceleration(function (acceleration) {
+                    $('#accX').val(acceleration.x);
+                    $('#accY').val(acceleration.y);
+                    $('#accZ').val(acceleration.z);
+                }, function ($error) {
+                    alert('error');
+                },
+                    { frequency: 100 }
+                );
+                $("#accBtn").val("Watching");
+            } else {
+                navigator.accelerometer.clearWatch(watchId);
+                $("#accBtn").val("Not activated");
+            }
+        });
+//        console.log(navigator.accelerometer);
     };
 
     function onPause() {
@@ -22,4 +44,4 @@
     function onResume() {
         // TODO: This application has been reactivated. Restore application state here.
     };
-} )();
+})();
