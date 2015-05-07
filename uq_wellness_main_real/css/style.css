@@ -42,3 +42,6 @@
 	-ms-filter: blur(5px);
 	filter: blur(5px);
 }
+.forget-pwd {
+    background-color: #29ABE2;
+}
