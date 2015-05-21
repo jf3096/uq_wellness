@@ -130,6 +130,14 @@
     <Content Include="main.html" />
     <Content Include="merges\android\scripts\android2.3-jscompat.js" />
     <Content Include="merges\android\scripts\platformOverrides.js" />
+    <Content Include="pedometer.html" />
+    <Content Include="plugins\cordova-plugin-pedometer\.fetch.json" />
+    <Content Include="plugins\cordova-plugin-pedometer\package.json" />
+    <Content Include="plugins\cordova-plugin-pedometer\plugin.xml" />
+    <Content Include="plugins\cordova-plugin-pedometer\README.md" />
+    <Content Include="plugins\cordova-plugin-pedometer\src\ios\Pedometer.h" />
+    <Content Include="plugins\cordova-plugin-pedometer\src\ios\Pedometer.m" />
+    <Content Include="plugins\cordova-plugin-pedometer\www\pedometer.js" />
     <Content Include="plugins\org.apache.cordova.device-motion\.fetch.json" />
     <Content Include="plugins\org.apache.cordova.device-motion\CONTRIBUTING.md" />
     <Content Include="plugins\org.apache.cordova.device-motion\doc\de\index.md" />
