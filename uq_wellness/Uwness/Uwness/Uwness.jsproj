@@ -127,6 +127,7 @@
     <Content Include="images\logo.svg" />
     <Content Include="images\walk-path.svg" />
     <Content Include="ionic.html" />
+    <Content Include="login.html" />
     <Content Include="main.html" />
     <Content Include="merges\android\scripts\android2.3-jscompat.js" />
     <Content Include="merges\android\scripts\platformOverrides.js" />
@@ -957,6 +958,7 @@
     <Content Include="scripts\ionic.js" />
     <Content Include="scripts\ionic.min.js" />
     <Content Include="scripts\jquery.circliful.js" />
+    <Content Include="scripts\ng-app.js" />
     <Content Include="scripts\version.json" />
     <Content Include="scripts\wellness.js" />
     <Content Include="scripts\wow.js" />

@@ -16,12 +16,12 @@ var iniWOW = function () {
     }
 }
 
-var redirect2Register = function() {
-    $("#register").click(function() {
-        redirect2Url(registerUrl);
-        return false;
-    });
-};
+//var redirect2Register = function() {
+//    $("#register").click(function() {
+//        redirect2Url(registerUrl);
+//        return false;
+//    });
+//};
 
 var redirect2Url=function($url) {
     location.href = $url;
@@ -30,5 +30,6 @@ var redirect2Url=function($url) {
 $(function () {
     initCircliful();
     iniWOW();
-    redirect2Register();
+    //redirect2Register();
 });
+
