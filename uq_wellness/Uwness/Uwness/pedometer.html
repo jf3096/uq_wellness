@@ -3,41 +3,18 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/animate.css" rel="stylesheet" />
-    <link href="css/wellness.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/animate.css" rel="stylesheet"/>
+    <link href="css/wellness.css" rel="stylesheet"/>
 </head>
 <body id="login" ng-app="TrekApp" ng-controller="PedometerCtrl">
-    <div class="container display-table">
-        <div class="row center-cell">
-            <div class="col-md-12">
-                <div class="wow fadeInDown">
-                    <p class="form-title">
-                        <img src="images/logo.png" id="logo" />
-                    </p>
-                    <form class="login" action="main.html">
-                        <input type="text" placeholder="Username" class="round-input" />
-                        <input type="password" placeholder="Password" class="round-input" />
-                        <input type="submit" value="Sign In" class="btn btn-blue btn-sm round-input" />
-                        <div class="row forget-pwd">
-                            <div class="col-md-12 txt-center">
-                                <a href="register.html">I forget my password</a>
-                            </div>
-                        </div>
-                        <input type="submit" value="Register" id="register" class="btn btn-purple btn-sm round-input" />
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="posted-by">
-            Created By: <a href="javascript:;">Focus Digital Co</a>
-        </div>
-    </div>
+<h1>pedometer</h1>
 </body>
 </html>
+<script src="scripts/angular.js"></script>
+<script src="scripts/ng-cordova.js"></script>
 <script src="cordova.js"></script>
 <script src="scripts/jquery-1.11.2.min.js"></script>
-<script src="scripts/angular.js"></script>
 <script src="scripts/bootstrap.min.js"></script>
 <script src="scripts/wow.js"></script>
 <script src="scripts/wellness.js"></script>
@@ -45,16 +22,19 @@
 <script src="scripts/ng-app.js"></script>
 <!--https://github.com/leecrossley/cordova-plugin-pedometer-->
 <script>
-    var trekApp = angular.module('TrekApp', []);
-    trekApp.controller('PedometerCtrl', ['$scope', function ($scope) {
+    var trekApp = angular.module('TrekApp', ['ngCordova']);
+    trekApp.controller('PedometerCtrl', ['$scope', function ($scope, $cordovaToast) {
         var successHandler = function (pedometerData) {
             $scope.steps = pedometerData.numberOfSteps;
+            $cordovaToast.showLongBottom(pedometerData.numberOfSteps).then(function (success) {
+            }, function (error) {
+            });
             // pedometerData.distance;
             // pedometerData.floorsAscended;
             // pedometerData.floorsDescended;
         };
         var onError = function (error) {
-            console.log("ERRO! " + error);
+            alert("ERRO! " + error);
         }
         pedometer.startPedometerUpdates(successHandler, onError);
     }]);

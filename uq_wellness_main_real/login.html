@@ -49,7 +49,7 @@
 
         #login-field {
             min-height: 0;
-            padding: 150px 0;
+            padding: 70px 0;
             background: rgba(238, 238, 238, 0.8);
         }
 
@@ -74,7 +74,7 @@
     <div class="container-fluid-full container-f">
         <!-- <div id="login-bg"></div> -->
         <div class="login-box">
-            <form class="form-horizontal" action="index.html" method="post">
+            <form class="form-horizontal" action="index.html">
                 <div id="login-field">
                     <h2>
                         <img src="img/UQTREK.png" width="180px" />
@@ -87,9 +87,9 @@
                         <div class="clearfix"></div>
 
                         <div>
-                            <button type="submit" class="btn btn-primary">Log in</button>
+                            <button type="button" class="btn btn-primary" id="login">Log in</button>
                         </div><div>
-                            <button type="submit" class="btn btn-primary forget-pwd">Forget Password?</button>
+                            <button type="button" class="btn btn-primary forget-pwd">Forget Password?</button>
                         </div>
                     </fieldset>
                 </div>
@@ -141,3 +141,8 @@
 
 </body>
 </html>
+<script>
+    $("#login").click(function() {
+        window.location = "index.html";
+    });
+</script>

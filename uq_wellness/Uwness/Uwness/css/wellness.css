@@ -4,7 +4,7 @@
     background-color: #F5F5F5;
 }
 
-.login {
+div.login {
     background: url('../images/bg-login.png') fixed;
     background-size: cover;
 }
@@ -162,7 +162,6 @@ form.login .forgot-pass-content {
 }
 
 .forgot-pw-content {
-    float: right;
     text-align: right;
 }
 
@@ -451,14 +450,16 @@ form.login a {
 .walk-path {
     width: 100%;
     height: 100%;
-    background: url("../images/walk-path.svg") no-repeat center center fixed;
-    background-size: contain;
+    background: url("../images/walk-path.png") no-repeat center center fixed;
+    background-size: cover;
 }
 
-a.register-link {
+form.login a.register-link {
     display: block;
-  margin-top: 10px;
+    margin-top: 10px;
+    font-size: 14px;
 }
-form.login a.register-link:hover {
-    color: white;
-}
+
+    form.login a.register-link:hover {
+        color: white;
+    }

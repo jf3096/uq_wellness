@@ -11,5 +11,6 @@
   <preference name="target-device" value="handset" />
   <vs:plugin name="org.apache.cordova.device-motion" version="0.2.10" />
   <vs:plugin name="cordova-plugin-pedometer" version="0.3.3" />
+  <vs:plugin name="nl.x-services.plugins.toast" version="2.0.6" />
   <vs:platformSpecificValues />
 </widget>

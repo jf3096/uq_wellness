@@ -1,4 +1,4 @@
-﻿var app = angular.module("TrekApp", ['ngRoute', 'ionic']);
+﻿var app = angular.module("TrekApp", ['ngRoute', 'ionic', 'ngCordova']);
 var storge_pedometer = "pedometer";
 
 
@@ -18,12 +18,12 @@ app.config(function ($routeProvider) {
         });
 
 });
-app.controller('TrekController', function ($scope, $ionicSideMenuDelegate) {
+app.controller('TrekController', function ($scope, $ionicSideMenuDelegate, $cordovaToast) {
     $scope.init = function () {
         var pedometerStepCount = localStorage.getItem(storge_pedometer);
+        $scope.pedometerStepCount = pedometerStepCount;
         if (pedometerStepCount && $scope.isNumeric(pedometerStepCount)) {
             var $circlestat = $('.circlestat');
-            debugger;
             //$circlestat.eq(0).data("text", "1000");
             if ($circlestat.length > 0) {
                 var $circleText = $(this).find(".circle-text");
@@ -32,8 +32,17 @@ app.controller('TrekController', function ($scope, $ionicSideMenuDelegate) {
         }
     }
 
+    $scope.showToastStepCount = function () {
+        $cordovaToast.showLongBottom($scope.pedometerStepCount).then(function (success) {
+        }, function (error) {
+        });
+    }
+
     $scope.loadWow = function () {
-        iniWOW();
+        var $wow = $(".wow");
+        if ($wow.length > 0) {
+            new WOW().init();
+        }
     }
 
     $scope.toggleLeftSideMenu = function () {
@@ -45,9 +54,13 @@ app.controller('TrekController', function ($scope, $ionicSideMenuDelegate) {
         var $circlestat = $('.circlestat');
         if ($circlestat.length > 0) {
             $circlestat.circliful();
+            debugger;
             $circlestat.on("click", function () {
                 var $circleText = $(this).find(".circle-text");
                 $circleText.text((Number($circleText.text()) + 1) + "");
+
+                $scope.showToastStepCount();
+
             });
         }
     }

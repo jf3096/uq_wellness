@@ -2,7 +2,7 @@
 <div class="container display-table login">
     <div class="row center-cell">
         <div class="col-md-12">
-            <div class="wow fadeInDown" onload="iniWOW();">
+            <div class="wow fadeInDown" ng-init="loadWow();">
                 <p class="form-title">
                     Register
                 </p>
@@ -12,9 +12,9 @@
                     <input type="password" placeholder="Confirm Password" class="round-input" />
                     <input type="submit" value="Register" class="btn round-input btn-purple btn-sm" />
                     <div class="remember-forgot">
-                            <div class="col-md-6 forgot-pw-content fr">
-                                <a href="#/">Return to login</a>
-                            </div>
+                        <div class="forgot-pw-content">
+                            <a href="#/">Return to login</a>
+                        </div>
                     </div>
                 </form>
             </div>
