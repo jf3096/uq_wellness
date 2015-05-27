@@ -1,4 +1,4 @@
-﻿<ion-side-menus >
+﻿<ion-side-menus>
     <!-- Center content -->
     <ion-side-menu-content drag-content="false">
         <ion-header-bar>
@@ -24,12 +24,12 @@
                     <div class="content">
                         <div class="center-cell pd-b60">
                             <div class="circlestat"
-                                 data-dimension="330" data-text="8000" data-info="Stps" data-width="30" data-fontsize="42" data-total="12000" data-part="8000" data-fgcolor="#A36CC1" data-bgcolor="#F5F5F5" data-fill="#F5F5F5" ng-init="initCircliful();init();"></div>
+                                 data-dimension="330" data-text="{{step}}" data-info="Stps" data-width="30" data-fontsize="42" data-total="12000" data-part="8000" data-fgcolor="#A36CC1" data-bgcolor="#F5F5F5" data-fill="#F5F5F5" ng-init="initCircliful($event);init();"></div>
                         </div>
                     </div>
                     <ion-footer-bar class="dp-blk">
                         <div>
-                            <div class="total-run purple-font">6.096km</div>
+                            <div class="total-run purple-font" ng-bind="distance">km</div>
                             <div class="footer-detail bg-purple">
                                 <span class="footer-caption">Todays Goal:</span>
                                 <span>12000 S</span>
@@ -47,20 +47,20 @@
                     <div class="content">
                         <div class="center-cell pd-b60">
                             <div class="circlestat "
-                                 data-dimension="330" data-text="2000" data-info="Cal" data-width="30" data-fontsize="42" data-total="12000" data-part="2000" data-fgcolor="#29ABE2" data-bgcolor="#F5F5F5" data-fill="#F5F5F5"></div>
+                                 data-dimension="330" data-text="2000" data-info="Cal" data-width="30" data-fontsize="42" data-total="12000" data-part="2000" data-fgcolor="#FF7392" data-bgcolor="#F5F5F5" data-fill="#F5F5F5"></div>
                         </div>
                     </div>
                     <ion-footer-bar class="dp-blk">
                         <div>
                             <div class="total-run">Just eaten <span class="ion-plus-circled ft-size36"></span></div>
-                            <div class="footer-detail footer-blue-bg">
+                            <div class="footer-detail footer-pink-bg">
                                 <span class="footer-caption">Todays Limit:</span>
                                 <span>12000 Cals</span>
                             </div>
                         </div>
                     </ion-footer-bar>
                 </ion-slide>
-                
+
             </ion-slide-box>
         </ion-content>
     </ion-side-menu-content>
@@ -75,7 +75,7 @@
                     <i class="icon ion-podium"></i>
                     Dashboard
                 </a>
-                <a class="item item-icon-left" href="#">
+                <a class="item item-icon-left" href="#/ribbon">
                     <i class="icon ion-trophy"></i>
                     Ribbons
                 </a>
@@ -83,7 +83,7 @@
                     <i class="icon ion-chatbubble-working"></i>
                     Moment
                 </a>
-                
+
                 <a class="item item-icon-left" href="#">
                     <i class="icon ion-android-happy"></i>
                     Friends
@@ -100,7 +100,7 @@
                     <i class="icon ion-gear-a"></i>
                     Settings
                 </a>
-                <a class="item item-icon-left" href="#">
+                <a class="item item-icon-left" ng-click="exitApp();">
                     <i class="icon ion-log-out"></i>
                     Sign Out
                 </a>

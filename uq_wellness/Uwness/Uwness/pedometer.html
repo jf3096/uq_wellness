@@ -15,6 +15,7 @@
 <script src="scripts/ng-cordova.js"></script>
 <script src="cordova.js"></script>
 <script src="scripts/jquery-1.11.2.min.js"></script>
+<script src="scripts/shake.js"></script>
 <script src="scripts/bootstrap.min.js"></script>
 <script src="scripts/wow.js"></script>
 <script src="scripts/wellness.js"></script>
@@ -24,18 +25,28 @@
 <script>
     var trekApp = angular.module('TrekApp', ['ngCordova']);
     trekApp.controller('PedometerCtrl', ['$scope', function ($scope, $cordovaToast) {
-        var successHandler = function (pedometerData) {
-            $scope.steps = pedometerData.numberOfSteps;
-            $cordovaToast.showLongBottom(pedometerData.numberOfSteps).then(function (success) {
-            }, function (error) {
-            });
-            // pedometerData.distance;
-            // pedometerData.floorsAscended;
-            // pedometerData.floorsDescended;
+//        var successHandler = function (pedometerData) {
+//            $scope.steps = pedometerData.numberOfSteps;
+//            $cordovaToast.showLongBottom(pedometerData.numberOfSteps).then(function (success) {
+//            }, function (error) {
+//            });
+//            // pedometerData.distance;
+//            // pedometerData.floorsAscended;
+//            // pedometerData.floorsDescended;
+//        };
+//        var onError = function (error) {
+//            alert("ERRO! " + error);
+//        }
+//        pedometer.startPedometerUpdates(successHandler, onError);
+
+        var onShake = function () {
+            // Code fired when a shake is detected
+            $cordovaToast.showLongBottom("+1");
         };
-        var onError = function (error) {
-            alert("ERRO! " + error);
-        }
-        pedometer.startPedometerUpdates(successHandler, onError);
+        // Start watching for shake gestures and call "onShake"
+        shake.startWatch(onShake);
+        // Stop watching for shake gestures
+        shake.stopWatch();
+
     }]);
 </script>

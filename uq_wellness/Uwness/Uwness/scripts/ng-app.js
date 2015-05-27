@@ -1,6 +1,7 @@
 ﻿var app = angular.module("TrekApp", ['ngRoute', 'ionic', 'ngCordova']);
 var storge_pedometer = "pedometer";
-
+var height = 1.70;
+var DistanceDivheight = 0.414;
 
 app.config(function ($routeProvider) {
     $routeProvider
@@ -15,20 +16,22 @@ app.config(function ($routeProvider) {
         })
         .when('/walk-path', {
             templateUrl: 'walk-path.html'
+        })
+        .when('/ribbon', {
+            templateUrl: 'ribbon.html'
         });
 
 });
+
+
+
 app.controller('TrekController', function ($scope, $ionicSideMenuDelegate, $cordovaToast) {
+    $scope.step = 5214;
     $scope.init = function () {
+        $scope.slideHasChanged(0);
         var pedometerStepCount = localStorage.getItem(storge_pedometer);
-        $scope.pedometerStepCount = pedometerStepCount;
         if (pedometerStepCount && $scope.isNumeric(pedometerStepCount)) {
-            var $circlestat = $('.circlestat');
-            //$circlestat.eq(0).data("text", "1000");
-            if ($circlestat.length > 0) {
-                var $circleText = $(this).find(".circle-text");
-                $circleText.text(pedometerStepCount);
-            }
+            $scope.step = pedometerStepCount;
         }
     }
 
@@ -49,19 +52,20 @@ app.controller('TrekController', function ($scope, $ionicSideMenuDelegate, $cord
         $ionicSideMenuDelegate.toggleLeft();
     };
 
-
     $scope.initCircliful = function () {
         var $circlestat = $('.circlestat');
         if ($circlestat.length > 0) {
-            $circlestat.circliful();
-            debugger;
-            $circlestat.on("click", function () {
-                var $circleText = $(this).find(".circle-text");
-                $circleText.text((Number($circleText.text()) + 1) + "");
-
-                $scope.showToastStepCount();
-
-            });
+            setTimeout(function () {
+                $circlestat.circliful();
+                $circlestat.on("click", function () {
+                    var $circleText = $(this).find(".circle-text");
+                    $scope.step++;
+                    $scope.$apply();
+                    $circleText.text($scope.step);
+                    localStorage.setItem(storge_pedometer, $scope.step);
+                    $scope.showToastStepCount();
+                });
+            }, 1);
         }
     }
     $scope.footerSlide = 1;
@@ -71,7 +75,7 @@ app.controller('TrekController', function ($scope, $ionicSideMenuDelegate, $cord
             $scope.headerClass = "bg-purple";
         }
         else if ($index === 1) {
-            $scope.headerClass = "footer-blue-bg";
+            $scope.headerClass = "footer-pink-bg";
         }
         else {
             $scope.headerClass = "bg-purple";
@@ -85,4 +89,18 @@ app.controller('TrekController', function ($scope, $ionicSideMenuDelegate, $cord
         console.log("back");
         window.history.back();
     }
+    $scope.exitApp = function () {
+        console.log("exit");
+        navigator.app.exitApp();
+    }
+    $scope.getDistance = function () {
+        var distance = $scope.step * height * DistanceDivheight;
+        if (distance >= 1000) {
+            return (distance / 1000).toFixed(2) + "km";
+        }
+        return distance.toFixed(0) + "m";
+    }
+    $scope.$watch('step', function () {
+        $scope.distance = $scope.getDistance();
+    }, true);
 });

@@ -127,7 +127,6 @@
     <Content Include="images\bg-login.svg" />
     <Content Include="images\logo.svg" />
     <Content Include="images\walk-path.svg" />
-    <Content Include="ionic.html" />
     <Content Include="login.html" />
     <Content Include="main.html" />
     <Content Include="merges\android\scripts\android2.3-jscompat.js" />
@@ -235,6 +234,11 @@
     <Content Include="plugins\org.apache.cordova.device-motion\www\Acceleration.js" />
     <Content Include="plugins\org.apache.cordova.device-motion\www\accelerometer.js" />
     <Content Include="res\icons\android\icon-48-mdpi.png" />
+    <Content Include="moment.html" />
+    <Content Include="friends.html" />
+    <Content Include="my-community.html" />
+    <Content Include="profile.html" />
+    <Content Include="setting.html" />
     <Content Include="ribbon.html" />
     <Content Include="scripts\angular-animate.js" />
     <Content Include="scripts\angular-animate.min.js" />
@@ -1023,6 +1027,7 @@
     <Content Include="scripts\jquery.circliful.js" />
     <Content Include="scripts\ng-app.js" />
     <Content Include="scripts\ng-cordova.js" />
+    <Content Include="scripts\shake.js" />
     <Content Include="scripts\version.json" />
     <Content Include="scripts\wellness.js" />
     <Content Include="scripts\wow.js" />
