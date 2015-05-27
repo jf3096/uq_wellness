@@ -31,8 +31,16 @@ div.login {
     background-color: #EBFAFF;
 }
 
+.light-pink-bg {
+    background-color: #FFEFF5;
+}
+
 .footer-blue-bg {
     background-color: #29ABE2;
+}
+
+.footer-pink-bg {
+    background-color: #FE8398;
 }
 
 .dp-blk {
@@ -78,6 +86,7 @@ form {
     margin: 0 auto;
     width: 250px;
 }
+
 
     form.login input[type="text"], form.login input[type="password"] {
         opacity: 0.8;
@@ -454,6 +463,13 @@ form.login a {
     background-size: cover;
 }
 
+.ribbon-content {
+    width: 100%;
+    height: 100%;
+    background: url("../images/walk-path.png") no-repeat center center fixed;
+    background-size: cover;
+}
+
 form.login a.register-link {
     display: block;
     margin-top: 10px;
@@ -463,3 +479,24 @@ form.login a.register-link {
     form.login a.register-link:hover {
         color: white;
     }
+
+.bar.bar-energized .title {
+    left: 0 !important;
+    right: 0 !important;
+}
+
+.bar-energized .button:active {
+    opacity: 0.5;
+}
+
+.cover-footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 43px;
+    line-height: 43px;
+    text-align: center;
+    background-color: #A36CC1;
+    color: white;
+}

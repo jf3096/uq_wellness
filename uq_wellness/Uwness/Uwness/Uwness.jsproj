@@ -120,6 +120,7 @@
     <Content Include="fonts\ionicons.ttf" />
     <Content Include="fonts\ionicons.woff" />
     <Content Include="images\bg-login.jpg" />
+    <Content Include="images\fork.png" />
     <Content Include="images\fork.svg" />
     <Content Include="images\head-photo.jpg" />
     <Content Include="images\ic_footprint.png" />
@@ -233,6 +234,8 @@
     <Content Include="plugins\org.apache.cordova.device-motion\tests\tests.js" />
     <Content Include="plugins\org.apache.cordova.device-motion\www\Acceleration.js" />
     <Content Include="plugins\org.apache.cordova.device-motion\www\accelerometer.js" />
+    <Content Include="res\icons\android\icon-48-mdpi.png" />
+    <Content Include="ribbon.html" />
     <Content Include="scripts\angular-animate.js" />
     <Content Include="scripts\angular-animate.min.js" />
     <Content Include="scripts\angular-animate.min.js.map" />
@@ -1028,7 +1031,6 @@
     <Content Include="merges\windows\scripts\platformOverrides.js" />
     <Content Include="merges\windows\scripts\winstore-jscompat.js" />
     <Folder Include="merges\wp8\" />
-    <Folder Include="res\icons\android\" />
     <Folder Include="res\icons\ios\" />
     <Folder Include="res\icons\wp8\" />
     <Folder Include="res\icons\windows\" />
@@ -1051,10 +1053,6 @@
     <Content Include="scripts\jquery-1.11.2.min.js" />
     <Content Include="scripts\platformOverrides.js" />
     <Content Include="css\index.css" />
-    <Content Include="res\icons\android\icon-36-ldpi.png" />
-    <Content Include="res\icons\android\icon-48-mdpi.png" />
-    <Content Include="res\icons\android\icon-72-hdpi.png" />
-    <Content Include="res\icons\android\icon-96-xhdpi.png" />
     <Content Include="res\icons\ios\icon-40.png" />
     <Content Include="res\icons\ios\icon-40-2x.png" />
     <Content Include="res\icons\ios\icon-50.png" />

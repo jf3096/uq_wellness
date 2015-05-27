@@ -80,4 +80,9 @@ app.controller('TrekController', function ($scope, $ionicSideMenuDelegate, $cord
     $scope.isNumeric = function (n) {
         return !isNaN(parseFloat(n)) && isFinite(n);
     }
+
+    $scope.back = function () {
+        console.log("back");
+        window.history.back();
+    }
 });
