@@ -3,6 +3,8 @@ var storge_pedometer = "pedometer";
 var height = 1.70;
 var DistanceDivheight = 0.414;
 
+var server_url = "allenps-it.wicp.net:37180";
+
 app.config(function ($routeProvider) {
     $routeProvider
         .when('/', {
@@ -19,10 +21,37 @@ app.config(function ($routeProvider) {
         })
         .when('/ribbon', {
             templateUrl: 'ribbon.html'
+        })
+        .when('/dashboard', {
+            templateUrl: 'dashboard.html'
+        })
+        .when('/moment', {
+            templateUrl: 'moment.html'
+        })
+        .when('/messages', {
+            templateUrl: 'messages.html'
+        })
+        .when('/friends', {
+            templateUrl: 'friends.html'
+        })
+        .when('/my-community', {
+            templateUrl: 'my-community.html'
+        })
+        .when('/profile', {
+            templateUrl: 'profile.html'
+        })
+        .when('/setting', {
+            templateUrl: 'setting.html'
         });
 
 });
 
+app.directive('sideMenu', function() {
+    return {
+        template: 
+            '<ion-side-menu side="left" class="sidebar-left"><ion-header-bar ng-class="headerClass"><h1 class="title">UQ Trek</h1></ion-header-bar><ion-content class="sidebar-left-content"><div class="list"><a class="item item-icon-left" href="#/main"><i class="icon ion-ios-home"></i>Home</a><a class="item item-icon-left" href="#/dashboard"><i class="icon ion-podium"></i>Dashboard</a><a class="item item-icon-left" href="#/ribbon"><i class="icon ion-trophy"></i>Ribbons</a><a class="item item-icon-left" href="#/moment"><i class="icon ion-chatbubble-working"></i>Moments</a><a class="item item-icon-left" href="#/messages"><i class="icon ion-chatbubble-working"></i>Messages</a>  <a class="item item-icon-left" href="#/friends"> <i class="icon ion-android-happy"></i>Friends</a><a class="item item-icon-left" href="#/my-community"><i class="icon ion-android-contacts"></i>Teams</a><a class="item item-icon-left" href="#/profile"><i class="icon ion-android-person"></i>My Profile</a><a class="item item-icon-left" href="#/setting"><i class="icon ion-gear-a"></i>Settings</a><a class="item item-icon-left" ng-click="exitApp();"><i class="icon ion-log-out"></i>Sign Out</a></div></ion-content></ion-side-menu>'
+    };
+});
 
 
 app.controller('TrekController', function ($scope, $ionicSideMenuDelegate, $cordovaToast) {
@@ -57,7 +86,7 @@ app.controller('TrekController', function ($scope, $ionicSideMenuDelegate, $cord
         if ($circlestat.length > 0) {
             setTimeout(function () {
                 $circlestat.circliful();
-                $circlestat.on("click", function () {
+                $circlestat.eq(0).on("click", function () {
                     var $circleText = $(this).find(".circle-text");
                     $scope.step++;
                     $scope.$apply();
@@ -103,4 +132,8 @@ app.controller('TrekController', function ($scope, $ionicSideMenuDelegate, $cord
     $scope.$watch('step', function () {
         $scope.distance = $scope.getDistance();
     }, true);
+
+    $scope.postRequest = function (url, json, successCallback) {
+        $.post(url, json, successCallback);
+    }
 });

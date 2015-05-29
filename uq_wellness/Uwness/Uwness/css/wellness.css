@@ -38,6 +38,7 @@ div.login {
 .footer-blue-bg {
     background-color: #29ABE2;
 }
+
 .foot-pink-bg {
     background-color: #FF7392;
 }
@@ -285,8 +286,16 @@ form.login a {
     background-color: #FAEBFF;
 }
 
+.path {
+    position: fixed;
+    top: 90px;
+    left: 0;
+    right: 0;
+    color: #4D4D4D;
+}
+
 .purple-font {
-    color: #87009E;
+    color: #87009E !important;
 }
 
 .ft-size36 {
@@ -469,7 +478,7 @@ form.login a {
 .ribbon-content {
     width: 100%;
     height: 100%;
-    background: url("../images/walk-path.png") no-repeat center center fixed;
+    background: url("../images/ribbon-content.png") no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -486,22 +495,39 @@ form.login a {
     background: url("../images/profile-content.png") no-repeat center center fixed;
     background-size: cover;
 }
+
 .friends-content {
     width: 100%;
     height: 100%;
     background: url("../images/friends-content.png") no-repeat center center fixed;
     background-size: cover;
 }
+
 .moment-content {
     width: 100%;
     height: 100%;
     background: url("../images/moment-content.png") no-repeat center center fixed;
     background-size: cover;
 }
+
+.messages-content {
+    width: 100%;
+    height: 100%;
+    background: url("../images/message-content.png") no-repeat center center fixed;
+    background-size: cover;
+}
+
 .my-community-content {
     width: 100%;
     height: 100%;
     background: url("../images/my-community-contenth.png") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.dashboard-content {
+    width: 100%;
+    height: 100%;
+    background: url("../images/dashboard-content.png") no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -535,4 +561,23 @@ form.login a.register-link {
     text-align: center;
     background-color: #A36CC1;
     color: white;
+}
+
+.walk-path-icon {
+    width: 24px;
+    margin-bottom: -5px;
+    margin-right: 2px;
+}
+
+.no-hover-effect:hover, .no-hover-effect:focus {
+    color: #23527c;
+    text-decoration: none;
+}
+
+.btn-menu {
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    width: 47px;
+    height: 47px;
 }
