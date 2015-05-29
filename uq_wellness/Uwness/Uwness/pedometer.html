@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/animate.css" rel="stylesheet"/>
+    <link href="css/wellness.css" rel="stylesheet"/>
+</head>
+<body id="login" ng-app="TrekApp" ng-controller="PedometerCtrl">
+<h1>pedometer</h1>
+</body>
+</html>
+<script src="scripts/angular.js"></script>
+<script src="scripts/ng-cordova.js"></script>
+<script src="cordova.js"></script>
+<script src="scripts/jquery-1.11.2.min.js"></script>
+<script src="scripts/shake.js"></script>
+<script src="scripts/bootstrap.min.js"></script>
+<script src="scripts/wow.js"></script>
+<script src="scripts/wellness.js"></script>
+<script src="scripts/index.js"></script>
+<script src="scripts/ng-app.js"></script>
+<!--https://github.com/leecrossley/cordova-plugin-pedometer-->
+<script>
+    var trekApp = angular.module('TrekApp', ['ngCordova']);
+    trekApp.controller('PedometerCtrl', ['$scope', function ($scope, $cordovaToast) {
+//        var successHandler = function (pedometerData) {
+//            $scope.steps = pedometerData.numberOfSteps;
+//            $cordovaToast.showLongBottom(pedometerData.numberOfSteps).then(function (success) {
+//            }, function (error) {
+//            });
+//            // pedometerData.distance;
+//            // pedometerData.floorsAscended;
+//            // pedometerData.floorsDescended;
+//        };
+//        var onError = function (error) {
+//            alert("ERRO! " + error);
+//        }
+//        pedometer.startPedometerUpdates(successHandler, onError);
+
+        var onShake = function () {
+            // Code fired when a shake is detected
+            $cordovaToast.showLongBottom("+1");
+        };
+        // Start watching for shake gestures and call "onShake"
+        shake.startWatch(onShake);
+        // Stop watching for shake gestures
+        shake.stopWatch();
+
+    }]);
+</script>

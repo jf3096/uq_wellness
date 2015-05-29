@@ -1,37 +1,110 @@
-﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title>Main</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="Content/ionic.min.css" rel="stylesheet" />
-    <link href="css/wellness.css" rel="stylesheet" />
-</head>
-<body>
-    <div id="wrapper">
-        <div id="top" class="ofh">
-            <div class="title fl">Steps</div>
-            <div class="fl"><img src="images/ic_footprint.png" /></div>
-        </div>
-        <div class="content">
-            <div class="center-cell">
-                <div class="circlestat"
-                     data-dimension="330" data-text="8000" data-info="Stps" data-width="30" data-fontsize="42" data-total="12000" data-part="8000" data-fgcolor="#A36CC1" data-bgcolor="#F5F5F5" data-fill="#F5F5F5"></div>
+﻿<ion-side-menus>
+    <!-- Center content -->
+    <ion-side-menu-content drag-content="false">
+        <ion-header-bar>
+            <div class="bar bar-header header" ng-class="headerClass">
+                <button class="button button-icon icon ion-navicon" ng-click="toggleLeftSideMenu()"></button>
+                <div class="h1 title">Header Buttons</div>
+                <button class="button button-clear button-positive">
+                    <div>
+                        <img src="images/head-photo.jpg" class="head-round-img" />
+                    </div>
+                </button>
             </div>
-        </div>
-        <div class="footer">
-            <div class="total-run">6.096km</div>
-            <div class="footer-detail bg-purple">
-                <span class="footer-caption">Todays Goal:</span>
-                <span>12000 S</span>
+        </ion-header-bar>
+        <ion-content>
+            <ion-slide-box on-slide-changed="slideHasChanged($index)">
+                <ion-slide>
+                    <div class="top ofh light-pink">
+                        <div class="title fl">Steps</div>
+                        <div class="fl">
+                            <img src="images/ic_footprint.png" />
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="center-cell pd-b60">
+                            <div class="circlestat"
+                                 data-dimension="330" data-text="{{step}}" data-info="Stps" data-width="30" data-fontsize="42" data-total="12000" data-part="8000" data-fgcolor="#A36CC1" data-bgcolor="#F5F5F5" data-fill="#F5F5F5" ng-init="initCircliful($event);init();"></div>
+                        </div>
+                    </div>
+                    <ion-footer-bar class="dp-blk">
+                        <div>
+                            <div class="total-run purple-font" ng-bind="distance">km</div>
+                            <div class="footer-detail bg-purple">
+                                <span class="footer-caption">Todays Goal:</span>
+                                <span>12000 S</span>
+                            </div>
+                        </div>
+                    </ion-footer-bar>
+                </ion-slide>
+                <ion-slide class="cal">
+                    <div class="top ofh light-pink-bg">
+                        <div class="title fl">Calories</div>
+                        <div class="fl">
+                            <img src="images/fork.png" />
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="center-cell pd-b60">
+                            <div class="circlestat "
+                                 data-dimension="330" data-text="2000" data-info="Cal" data-width="30" data-fontsize="42" data-total="12000" data-part="2000" data-fgcolor="#FF7392" data-bgcolor="#F5F5F5" data-fill="#F5F5F5"></div>
+                        </div>
+                    </div>
+                    <ion-footer-bar class="dp-blk">
+                        <div>
+                            <div class="total-run">Just eaten <span class="ion-plus-circled ft-size36"></span></div>
+                            <div class="footer-detail footer-pink-bg">
+                                <span class="footer-caption">Todays Limit:</span>
+                                <span>12000 Cals</span>
+                            </div>
+                        </div>
+                    </ion-footer-bar>
+                </ion-slide>
+
+            </ion-slide-box>
+        </ion-content>
+    </ion-side-menu-content>
+    <!-- Left menu -->
+    <ion-side-menu side="left" class="sidebar-left">
+        <ion-header-bar ng-class="headerClass">
+            <h1 class="title">UQ Trek</h1>
+        </ion-header-bar>
+        <ion-content class="sidebar-left-content">
+            <div class="list">
+                <a class="item item-icon-left" href="#/walk-path">
+                    <i class="icon ion-podium"></i>
+                    Dashboard
+                </a>
+                <a class="item item-icon-left" href="#/ribbon">
+                    <i class="icon ion-trophy"></i>
+                    Ribbons
+                </a>
+                <a class="item item-icon-left" href="#">
+                    <i class="icon ion-chatbubble-working"></i>
+                    Moment
+                </a>
+
+                <a class="item item-icon-left" href="#">
+                    <i class="icon ion-android-happy"></i>
+                    Friends
+                </a>
+                <a class="item item-icon-left" href="#">
+                    <i class="icon ion-android-contacts"></i>
+                    My Community
+                </a>
+                <a class="item item-icon-left" href="#">
+                    <i class="icon ion-android-person"></i>
+                    Profile
+                </a>
+                <a class="item item-icon-left" href="#">
+                    <i class="icon ion-gear-a"></i>
+                    Settings
+                </a>
+                <a class="item item-icon-left" ng-click="exitApp();">
+                    <i class="icon ion-log-out"></i>
+                    Sign Out
+                </a>
             </div>
-        </div>
-    </div>
-</body>
-</html>
-<!--<script src="cordova.js"></script>-->
-<script src="scripts/jquery-1.11.2.min.js"></script>
-<script src="scripts/bootstrap.min.js"></script>
-<script src="scripts/jquery.circliful.js"></script>
-<script src="scripts/wellness.js"></script>
-<script src="scripts/index.js"></script>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

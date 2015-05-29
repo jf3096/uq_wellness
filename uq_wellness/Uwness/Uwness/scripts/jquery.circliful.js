@@ -1,9 +1,7 @@
 "use strict";
 
 (function ($) {
-
     $.fn.circliful = function (options, callback) {
-
         var settings = $.extend({
             // These are the defaults.
             startdegree: 0,

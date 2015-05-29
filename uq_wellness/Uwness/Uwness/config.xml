@@ -3,10 +3,14 @@
   <name>Uwness</name>
   <description>A blank project that uses Apache Cordova to help you build an app that targets multiple mobile platforms: Android, iOS, Windows, and Windows Phone.</description>
   <author href="http://cordova.io" email="dev@cordova.apache.org">Apache Cordova Team </author>
-  <content src="ionic.html" />
+  <content src="index.html" />
   <access origin="*" />
   <preference name="SplashScreen" value="screen" />
   <preference name="windows-target-version" value="8.0" />
   <preference name="windows-phone-target-version" value="8.1" />
+  <preference name="target-device" value="handset" />
+  <vs:plugin name="org.apache.cordova.device-motion" version="0.2.10" />
+  <vs:plugin name="cordova-plugin-pedometer" version="0.3.3" />
+  <vs:plugin name="nl.x-services.plugins.toast" version="2.0.6" />
   <vs:platformSpecificValues />
 </widget>
