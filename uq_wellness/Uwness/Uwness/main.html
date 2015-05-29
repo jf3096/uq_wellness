@@ -14,7 +14,7 @@
         </ion-header-bar>
         <ion-content>
             <ion-slide-box on-slide-changed="slideHasChanged($index)">
-                <ion-slide>
+                <ion-slide class="pedometer">
                     <div class="top ofh light-pink">
                         <div class="title fl">Steps</div>
                         <div class="fl">
@@ -29,7 +29,7 @@
                     </div>
                     <ion-footer-bar class="dp-blk">
                         <div>
-                            <div class="total-run purple-font" ng-bind="distance">km</div>
+                            <div class="total-run purple-font"><a class="no-hover-effect" href="#/walk-path"><img class="walk-path-icon" src="images/walk-path-con.png"/><span class="purple-font" ng-bind="distance"></span></a></div>
                             <div class="footer-detail bg-purple">
                                 <span class="footer-caption">Todays Goal:</span>
                                 <span>12000 S</span>
@@ -60,7 +60,6 @@
                         </div>
                     </ion-footer-bar>
                 </ion-slide>
-
             </ion-slide-box>
         </ion-content>
     </ion-side-menu-content>
@@ -71,7 +70,7 @@
         </ion-header-bar>
         <ion-content class="sidebar-left-content">
             <div class="list">
-                <a class="item item-icon-left" href="#/walk-path">
+                <a class="item item-icon-left" href="#/dashboard">
                     <i class="icon ion-podium"></i>
                     Dashboard
                 </a>
@@ -79,24 +78,27 @@
                     <i class="icon ion-trophy"></i>
                     Ribbons
                 </a>
-                <a class="item item-icon-left" href="#">
-                    <i class="icon ion-chatbubble-working"></i>
+                <a class="item item-icon-left" href="#/moment">
+                    <i class="icon ion-social-instagram"></i>
                     Moment
                 </a>
-
-                <a class="item item-icon-left" href="#">
+                <a class="item item-icon-left" href="#/messages">
+                    <i class="icon ion-chatbubble-working"></i>
+                    Messages
+                </a>
+                <a class="item item-icon-left" href="#/friends">
                     <i class="icon ion-android-happy"></i>
                     Friends
                 </a>
-                <a class="item item-icon-left" href="#">
+                <a class="item item-icon-left" href="#/my-community">
                     <i class="icon ion-android-contacts"></i>
-                    My Community
+                    Teams
                 </a>
-                <a class="item item-icon-left" href="#">
+                <a class="item item-icon-left" href="#/profile">
                     <i class="icon ion-android-person"></i>
-                    Profile
+                    My Profile
                 </a>
-                <a class="item item-icon-left" href="#">
+                <a class="item item-icon-left" href="#/setting">
                     <i class="icon ion-gear-a"></i>
                     Settings
                 </a>
