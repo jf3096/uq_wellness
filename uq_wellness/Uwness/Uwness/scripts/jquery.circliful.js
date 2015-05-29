@@ -1,24 +1,29 @@
 "use strict";
 
 (function ($) {
-    $.fn.circliful = function (options, callback) {
-        var settings = $.extend({
-            // These are the defaults.
-            startdegree: 0,
-            fgcolor: "#556b2f",
-            bgcolor: "#eee",
-            fill: false,
-            width: 15,
-            dimension: 200,
-            fontsize: 15,
-            percent: 50,
-            animationstep: 1.0,
-            iconsize: '20px',
-            iconcolor: '#999',
-            border: 'default',
-            complete: null,
-            bordersize: 10
-        }, options);
+    $.fn.circliful = function (settingObj, options, callback) {
+        var settings;
+        if (typeof (settingObj) == "undefined") {
+            settings = $.extend({
+                // These are the defaults.
+                startdegree: 0,
+                fgcolor: "#556b2f",
+                bgcolor: "#eee",
+                fill: false,
+                width: 15,
+                dimension: 200,
+                fontsize: 15,
+                percent: 50,
+                animationstep: 1.0,
+                iconsize: '20px',
+                iconcolor: '#999',
+                border: 'default',
+                complete: null,
+                bordersize: 10
+            }, options);
+        } else {
+            settings = $.extend(settingObj, options);
+        }
 
         return this.each(function () {
 
@@ -62,15 +67,20 @@
             }
 
             if ($(this).data("total") != undefined && $(this).data("part") != undefined) {
+                debugger;
                 var total = $(this).data("total") / 100;
 
                 percent = (($(this).data("part") / total) / 100).toFixed(3);
                 endPercent = ($(this).data("part") / total).toFixed(3);
             } else {
+                debugger;
+
                 if ($(this).data("percent") != undefined) {
                     percent = $(this).data("percent") / 100;
                     endPercent = $(this).data("percent");
                 } else {
+                    endPercent = settings.percent;
+
                     percent = settings.percent / 100;
                 }
             }
