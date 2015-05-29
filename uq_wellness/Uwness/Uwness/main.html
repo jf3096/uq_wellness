@@ -24,12 +24,12 @@
                     <div class="content">
                         <div class="center-cell pd-b60">
                             <div class="circlestat"
-                                 data-dimension="330" data-text="{{step}}" data-info="Stps" data-width="30" data-fontsize="42" data-total="12000" data-part="8000" data-fgcolor="#A36CC1" data-bgcolor="#F5F5F5" data-fill="#F5F5F5" ng-init="initCircliful($event);init();"></div>
+                                 data-text="{{step}}" data-info="Stps" ng-init="initCircliful($event);init();"></div>
                         </div>
                     </div>
                     <ion-footer-bar class="dp-blk">
                         <div>
-                            <div class="total-run purple-font"><a class="no-hover-effect" href="#/walk-path"><img class="walk-path-icon" src="images/walk-path-con.png"/><span class="purple-font" ng-bind="distance"></span></a></div>
+                            <div class="total-run purple-font"><a class="no-hover-effect" href="#/walk-path"><img class="walk-path-icon" src="images/walk-path-con.png" /><span class="purple-font" ng-bind="distance"></span></a></div>
                             <div class="footer-detail bg-purple">
                                 <span class="footer-caption">Todays Goal:</span>
                                 <span>12000 S</span>
@@ -46,8 +46,7 @@
                     </div>
                     <div class="content">
                         <div class="center-cell pd-b60">
-                            <div class="circlestat "
-                                 data-dimension="330" data-text="2000" data-info="Cal" data-width="30" data-fontsize="42" data-total="12000" data-part="2000" data-fgcolor="#FF7392" data-bgcolor="#F5F5F5" data-fill="#F5F5F5"></div>
+                            <div class="circlestat"data-text="{{kCal}}" data-info="kCal"></div>
                         </div>
                     </div>
                     <ion-footer-bar class="dp-blk">
@@ -55,7 +54,7 @@
                             <div class="total-run">Just eaten <span class="ion-plus-circled ft-size36"></span></div>
                             <div class="footer-detail footer-pink-bg">
                                 <span class="footer-caption">Todays Limit:</span>
-                                <span>12000 Cals</span>
+                                <span>500 kCals</span>
                             </div>
                         </div>
                     </ion-footer-bar>
