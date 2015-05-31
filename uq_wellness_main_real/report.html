@@ -53,6 +53,15 @@
             padding-left: 15px;
             float: left;
         }
+
+        .col-lg-3.col-xs-6.first {
+            padding-left: 0;
+        }
+
+        .col-lg-3.col-xs-6.last {
+            padding-right: 0;
+        }
+
         /*@media (min-width: 1200px)
         */
         .bg-aqua, .callout.callout-info, .alert-info, .label-info, .modal-info .modal-body {
@@ -107,17 +116,21 @@
                 color: rgba(0, 0, 0, 0.15);
             }
 
-            .small-box > .small-box-footer {
-                position: relative;
-                text-align: center;
-                padding: 3px 0;
-                color: #fff;
-                color: rgba(255, 255, 255, 0.8);
-                display: block;
-                z-index: 10;
-                background: rgba(0, 0, 0, 0.1);
-                text-decoration: none;
-            }
+        .icon.effect {
+              font-size: 96px;
+        }
+
+        .small-box > .small-box-footer {
+            position: relative;
+            text-align: center;
+            padding: 3px 0;
+            color: #fff;
+            color: rgba(255, 255, 255, 0.8);
+            display: block;
+            z-index: 10;
+            background: rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+        }
 
         .ion.ion-bag {
             display: inline-block;
@@ -418,7 +431,7 @@
                 <h1>Reports</h1>
                 <div class="row-fluid">
 
-                    <div class="col-lg-3 col-xs-6">
+                    <div class="span3">
                         <!-- small box -->
                         <div class="small-box bg-green">
                             <div class="inner">
@@ -431,7 +444,7 @@
                             <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
                         </div>
                     </div><!-- ./col -->
-                    <div class="col-lg-3 col-xs-6">
+                    <div class="span3">
                         <!-- small box -->
                         <div class="small-box bg-yellow">
                             <div class="inner">
@@ -444,7 +457,7 @@
                             <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
                         </div>
                     </div><!-- ./col -->
-                    <div class="col-lg-3 col-xs-6">
+                    <div class="span3">
                         <!-- small box -->
                         <div class="small-box bg-red">
                             <div class="inner">
@@ -457,7 +470,7 @@
                             <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
                         </div>
                     </div><!-- ./col -->
-                    <div class="col-lg-3 col-xs-6">
+                    <div class="span3">
                         <!-- small box -->
                         <div class="small-box bg-aqua">
                             <div class="inner">
@@ -774,9 +787,9 @@
     <script>
         $(function () {
             $(".small-box .icon").hover(function () {
-                $(this).css([
-                    "top", "-10px", "right", "10px"
-                ]);
+                $(this).addClass("effect");
+            },function() {
+                $(this).removeClass("effect");
             });
             /*top: -10px;
         right: 10px;*/
